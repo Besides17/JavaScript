@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水仙花数</title>
+</head>
+<body>
+    <p>水仙花数</p><br>
+    <input id="demo" type="text" />
+    <button onclick="myfunction()">确定</button>
+    <script>
+        function myfunction()
+        {
+            var x = document.getElementById("demo").value;
+            if(100<= x <1000)
+            {
+                var a =  x% 10;
+                var b = parseInt(x / 10) % 10;
+                var c = parseInt(x / 100);
+                var sum = a*a*a+b*b*b+c*c*c;
+                if(x == sum)
+                {
+                    document.write("Yes");
+                }
+                else
+                {
+                    document.write("No")
+                }
+            }
+            else
+            {
+                document.write("WROOY");
+            }
+        }
+    </script>
+</body>
+</html>
